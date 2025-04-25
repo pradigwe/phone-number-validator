@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: start;
+    background-color: #fefefe;
+    overflow-y: hidden;
+}
+
+header {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end;
+    justify-content: center;
+}
+
+main {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+}
+footer {
+    height: 10vh;
+}
+
+/* Result styling */
+#results-div {
+
+    max-height: 50vh;
+    /* height: 50vh; */
+    width: 60%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+}
+
+.response-msg, .user-msg {
+    position: relative;
+    border-radius: .4em;
+    width: 400px;
+    padding: 20px;
+}
+
+.response-msg::after, .user-msg::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+	width: 0;
+	height: 0;
+	border: 33px solid transparent;
+    border-bottom: 0;
+	margin-top: -16.5px;   
+}
+
+.response-msg {
+    background-color: #aabf67;
+    justify-self: right;
+    margin-right: 50px;
+}
+.response-msg::after {
+    right: 0;
+    border-left-color: #aabf67;
+    border-right: 0;
+    margin-right: -33px; 
+}
+
+.user-msg {
+    background-color: #c4d48d;
+    justify-self: left;
+    margin-left: 50px;
+
+}
+.user-msg::after {
+    left: 0;
+    border-right-color: #c4d48d;
+    border-left: 0;
+    margin-left: -33px; 
+}
+
+/* Input styling */
+#input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    height: 10vh;
+}
+
+#user-input {
+    width: 500px;
+}
+
+
+/* Button Styling */
+
+#clear-btn, #check-btn {
+    height: 40px;
+    width: 70px;
+    border-radius: 50px;
+}
+
+#clear-btn {
+    background-color: #ad2e45;
+}
+
+#check-btn {
+    background-color: #595f31;
+    color: #fefefe;
+}
